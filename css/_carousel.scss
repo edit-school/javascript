@@ -1,0 +1,144 @@
+
+.carousel_container, .carousel_container > * {box-sizing:border-box}
+
+.carousel_container {
+  position: relative;
+  margin: 10rem auto;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+
+.carousel_image {
+  margin: auto 0;
+  width: auto;
+  max-height: 50rem;
+  max-width: 50rem;
+  align-self: center;
+}
+
+.slide {
+  display: none;
+
+  a {
+    max-height: 30rem;
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+
+    img {
+      position: relative;
+      max-height: 30rem;
+    }
+
+  }
+  
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: -5rem;
+  border-radius: 6px;
+}
+
+.prev {
+  left: -5rem;
+  border-radius: 6px;
+}
+
+.prev:hover, .next:hover {
+  background-color: lightgrey;
+}
+
+.text {
+  color: black;
+  position: relative;
+  bottom: -10rem;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+  margin: 1em 1rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+#dots_container {
+  margin-top: 2em;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 900px) {
+  .carousel {
+    
+    &_container {
+    position: relative;
+    margin: 4rem auto ;
+
+    h2 {transform: scale(0.6);
+    margin: 0}
+    }
+
+    &_image {
+      height: auto;
+      width: 75%;
+      }
+  
+  }
+
+  #product_image {
+    width: 75%;
+    height: auto;
+  }
+
+  .text {
+    bottom: -2rem;
+    width: auto;
+  }
+
+  .slide a {
+    height: auto;
+    width: auto;
+  }
+
+  .next, .prev {display:none;}
+    
+}

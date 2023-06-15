@@ -1,0 +1,74 @@
+@import "../mixins";
+
+.card {
+	@include flex(null, center);
+	@include fontSize(0.8);
+	flex-direction: column;
+	overflow: hidden;
+	justify-content: flex-end;
+	padding: 2em;
+  margin: 2em;
+	background: white;
+	
+	img {
+		max-width: 100%;
+		max-height: 300px;
+	}
+
+	a {color: black}
+
+	&_header {
+		position: relative;
+		padding: 1em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+  &_label {
+		font-size: 1em;
+    min-height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+		padding: 1em;
+    h6 {
+			font-weight: bold}
+			font-size: 1em;
+			text-align: center;
+    }
+    span {color: rgba(156, 156, 156, 1);
+		}
+}
+
+.product_card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	&__container {
+		display: flex;
+		gap: 1em;
+		margin-bottom: 1.5em;
+
+		&--column {
+			display: flex;
+			flex-direction: column;
+
+			.btn_warning {
+				align-self: flex-end;
+			}
+		}
+	}
+
+	.checkbox {
+		display: flex;
+		align-items: center;
+		color: gray;
+	}
+
+	@media screen and (max-width:1024px) {
+		width: calc(100% - 8px);
+	}
+}

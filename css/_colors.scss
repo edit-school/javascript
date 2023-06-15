@@ -1,0 +1,41 @@
+/****** .bg color variants ******/
+
+$bg-variants: primary, secondary, primarydark, secondarydark;
+$bg-variantcolors: white, rgba(247, 238, 227, 1), black, rgba(81, 79, 77, 1);
+
+
+@each $bg-variant in $bg-variants {
+	$i: index($bg-variants, $bg-variant);
+
+	.bg_#{$bg-variant} {
+		background: nth($bg-variantcolors, $i);
+	}
+}
+
+
+/****** .btn color variants ******/
+
+$btn-variants: primary, success, warning, danger;
+$btn-variantcolors: blue, green, rgba(252, 237, 112, 1), red;
+
+@each $btn-variant in $btn-variants {
+	$i: index($btn-variants, $btn-variant);
+
+	.btn_#{$btn-variant} {
+		background: nth($btn-variantcolors, $i);
+	}
+}
+
+
+/****** .color-icons variants ******/
+
+$color_icon-variants: blue, green, red, black;
+$color_icon-variantcolors: rgba(1, 31, 137, 1),rgba(61, 137, 1, 1), rgba(137, 1, 9, 1), black;
+
+@each $color_icon-variant in $color_icon-variants {
+	$i: index($color_icon-variants, $color_icon-variant);
+
+	.color_icon--#{$color_icon-variant} {
+		background: nth($color_icon-variantcolors, $i);
+	}
+}

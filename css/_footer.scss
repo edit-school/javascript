@@ -1,0 +1,109 @@
+
+.social_media {
+  width: 100%;
+  padding: 3em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    margin: 0 0.5em;
+  }
+
+  .subscription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    input {
+      color: white;
+      font-size: 0.8em;
+      display: block;
+      padding: 8px 16px;
+      border: 2px solid rgba(247, 238, 227, 1);
+      border-radius: 4px 0 0 4px;
+      width: 12rem;
+    }
+    input::placeholder {
+      color: rgba(247, 238, 227, 1);
+    }
+
+    button {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+.footer_menu {
+  color: white;
+  width: 100%;
+  padding: 5em 1em 2em;
+
+  &__submenu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    place-content: flex-start;
+    align-items: flex-start;
+  }
+
+  h6 {
+    font-weight: bold;
+    margin-bottom: 0.8em;
+  }
+
+  a {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  }
+}
+
+.footer_info {
+  width: 100%;
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    color: white;
+    font-size: 0.8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+  } 
+}
+
+@media only screen and (max-width: 600px) {
+  .social_media {
+    justify-content: center;
+    
+    .icons {
+      display: none;
+    }
+  
+    .subscription {
+      width: 100%;
+      flex-direction: column;
+      
+      input {
+        text-align: center;
+        border-radius: 4px;
+        margin: 4px 0;
+        position: relative;
+        box-sizing: border-box;
+        width: auto;
+      }
+
+      button {
+        width: 100%;
+        border-radius: 4px;
+        margin: 4px 0;
+      }
+    }
+  }
+
+  .footer_menu {
+    padding-top: 10px;
+  }
+}

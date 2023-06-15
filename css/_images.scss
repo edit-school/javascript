@@ -1,0 +1,57 @@
+
+.thumbnail {
+  overflow: hidden;
+    
+  img {
+    width: 100%;
+    height: auto
+  }
+
+  &--category {
+    position: relative;
+
+    img {
+      object-fit: cover;
+      width:100%;
+      height: 100%;
+      aspect-ratio: 2/1;
+    }
+
+    span {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: black;
+    }
+    &--edit {
+      text-align: center;
+      img {
+        position: relative;
+        max-height: 400px;
+        width: auto;
+      }
+
+    }
+  }
+}
+
+.rollover {
+  display: none;
+  opacity: 0;
+  position: absolute;
+}
+
+.card:hover .rollover {
+  display: block;
+  animation: fadein 0.5s ease-in-out forwards;
+}
+
+@keyframes fadein {
+  from {opacity: 0}
+  to {opacity: 100%}
+}
+
+#product_image {
+  max-height: 500px;
+  width: auto;
+}
